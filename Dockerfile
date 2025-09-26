@@ -1,0 +1,6 @@
+FROM docker.io/library/postgres:18rc1-alpine3.22
+USER 1001
+RUN mkdir -p /var/lib/postgresql/data
+RUN chown 1001:1001 /var/lib/postgresql/data
+EXPOSE 5432
+CMD ["postgres"]
